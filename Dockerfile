@@ -13,16 +13,16 @@ RUN \
     python3-pip && \
 
 # install pip modules
-  pip3 install --upgrade pip && \
-  pip3 install requests && \
-  pip3 install requests[security] && \
-  pip3 install requests-cache && \
-  pip3 install babelfish && \
-  pip3 install 'guessit<2' && \
-  pip3 install 'subliminal<2' && \
-  pip3 install stevedore==1.19.1 && \
-  pip3 install python-dateutil && \
-  pip3 install qtfaststart && \
+  pip install --upgrade pip && \
+  pip install requests && \
+  pip install requests[security] && \
+  pip install requests-cache && \
+  pip install babelfish && \
+  pip install 'guessit<2' && \
+  pip install 'subliminal<2' && \
+  pip install stevedore==1.19.1 && \
+  pip install python-dateutil && \
+  pip install qtfaststart && \
 
 # clone repo
   mkdir /sickbeard_mp4_automator && \
