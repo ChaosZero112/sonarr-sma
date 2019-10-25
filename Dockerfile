@@ -1,5 +1,5 @@
 FROM linuxserver/sonarr:preview
-MAINTAINER mdhiggins <mdhiggins23@gmail.com>
+# (Previous) MAINTAINER mdhiggins <mdhiggins23@gmail.com>
 
 # get python3 and git, and install python libraries
 RUN \
@@ -47,4 +47,7 @@ RUN \
   rm -rf \
     /tmp/* \
     /var/lib/apt/lists/* \
-    /var/tmp/*
+    /var/tmp/* \
+    
+# Symlink
+  ln -s /usr/local/bin/sma/sickbeard_mp4_automator /sickbeard_mp4_automator
