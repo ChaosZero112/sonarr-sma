@@ -47,7 +47,7 @@ RUN \
   rm -rf \
     /tmp/* \
     /var/lib/apt/lists/* \
-    /var/tmp/* \
+    /var/tmp/* && \
     
 # Symlink
   ln -s /usr/local/bin/sma/sickbeard_mp4_automator /sickbeard_mp4_automator
