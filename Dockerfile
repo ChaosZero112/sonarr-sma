@@ -2,14 +2,14 @@ FROM bitnami/minideb:buster
 # (Previous) MAINTAINER mdhiggins <mdhiggins23@gmail.com>
 
 # get vim, ffmpeg, git, and install python libraries
-RUN \
-  install_packages \
+RUN install_packages \
     git \
     wget \
     vim \
     ffmpeg \
     python3 \
-    python3-pip && \
+    python3-pip \
+    python3-setuptools && \
     
 # pip modules
     pip3 install requests && \ 
