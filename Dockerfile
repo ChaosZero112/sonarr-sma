@@ -12,7 +12,8 @@ RUN install_packages \
     python3-setuptools && \
     
 # pip modules
-    pip3 install wheel %% \
+    python3 -m pip install --upgrade pip && \
+    pip3 install wheel && \
     pip3 install requests && \ 
     pip3 install requests[security] && \ 
     pip3 install requests-cache && \ 
