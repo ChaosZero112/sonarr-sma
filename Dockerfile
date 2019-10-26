@@ -1,23 +1,14 @@
-FROM linuxserver/sonarr:preview
+FROM python:slim
 # (Previous) MAINTAINER mdhiggins <mdhiggins23@gmail.com>
 
-# get python3, vim, ffmpeg, git, and install python libraries
+# get vim, ffmpeg, git, and install python libraries
 RUN \
   apt-get update && \
   apt-get install -y \
     git \
     wget \
     vim \
-    ffmpeg \
-    python \
-    python-pip \
-    openssl \
-    python-dev \
-    libffi-dev \
-    libssl-dev \
-    libxml2-dev \
-    libxslt1-dev \
-    zlib1g-dev && \
+    ffmpeg && \
     
 # pip modules
     pip install requests && \ 
