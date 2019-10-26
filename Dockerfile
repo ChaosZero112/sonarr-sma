@@ -42,4 +42,5 @@ RUN install_packages \
     /var/lib/apt/lists/* \
     /var/tmp/*
 
+WORKDIR /sickbeard_mp4_automator
 CMD ["/bin/bash"]
