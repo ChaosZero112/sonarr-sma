@@ -41,3 +41,5 @@ RUN install_packages \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
+
+CMD ["/bin/bash"]
