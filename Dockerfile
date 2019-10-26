@@ -9,7 +9,7 @@ RUN \
     vim \
     ffmpeg \
     python3 \
-    python3-pip && \
+    python-pip && \
     
 # pip modules
     pip install requests && \ 
