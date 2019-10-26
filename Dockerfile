@@ -1,14 +1,15 @@
-FROM python:slim
+FROM bitnami/minideb:buster
 # (Previous) MAINTAINER mdhiggins <mdhiggins23@gmail.com>
 
 # get vim, ffmpeg, git, and install python libraries
 RUN \
-  apt-get update && \
-  apt-get install -y \
+  install_packages \
     git \
     wget \
     vim \
-    ffmpeg && \
+    ffmpeg \
+    python3 \
+    python3-pip && \
     
 # pip modules
     pip install requests && \ 
