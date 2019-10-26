@@ -9,18 +9,18 @@ RUN \
     vim \
     ffmpeg \
     python3 \
-    python-pip && \
+    python3-pip && \
     
 # pip modules
-    pip install requests && \ 
-    pip install requests[security] && \ 
-    pip install requests-cache && \ 
-    pip install babelfish && \ 
-    pip install 'guessit<2' && \ 
-    pip install 'subliminal<2' && \ 
-    pip uninstall -y stevedore && \
-    pip install stevedore==1.19.1 && \ 
-    pip install qtfaststart && \ 
+    pip3 install requests && \ 
+    pip3 install requests[security] && \ 
+    pip3 install requests-cache && \ 
+    pip3 install babelfish && \ 
+    pip3 install 'guessit<2' && \ 
+    pip3 install 'subliminal<2' && \ 
+    pip3 uninstall -y stevedore && \
+    pip3 install stevedore==1.19.1 && \ 
+    pip3 install qtfaststart && \ 
 
 # clone repo
   mkdir /sickbeard_mp4_automator && \
