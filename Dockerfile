@@ -6,7 +6,7 @@ RUN install_packages \
     git \
     wget \
     vim \
-    ffmpeg \
+    xz-utils \
     python3 \
     python3-pip \
     python3-setuptools && \
@@ -37,6 +37,13 @@ RUN install_packages \
   touch /var/log/sickbeard_mp4_automator/index.log && \
   chgrp -R users /var/log/sickbeard_mp4_automator && \
   chmod -R g+w /var/log/sickbeard_mp4_automator && \
+
+# ffmpeg latest
+  wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz -O /tmp/ffmpeg-git-amd64-static.tar.xz && \
+  tar xvf /tmp/ffmpeg-git-amd64-static.tar.xz -C /tmp --strip-components 1 && \
+  cp /tmp/ffmpeg /tmp/ffprobe /usr/bin/ && \
+  chmod g+x /usr/bin/ffmpeg && \
+  chmod g+x /usr/bin/ffprobe && \  
 
 # cleanup
   rm -rf \
